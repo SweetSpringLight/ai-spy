@@ -1,0 +1,162 @@
+[
+  {
+    "id": "com.example.mergegame",
+    "name": "Merge Masters: Cute Pets",
+    "publisher": "Happy Games Studio",
+    "releaseDate": "2024-03-15",
+    "description": "Merge cute pets and create amazing combinations in this addictive casual game!",
+    "images": {
+      "icon": "/games/merge-masters/icon.png",
+      "screenshots": [
+        "/games/merge-masters/screen1.png",
+        "/games/merge-masters/screen2.png"
+      ],
+      "featureGraphic": "/games/merge-masters/feature.png"
+    },
+    "metadata": {
+      "genre": ["Casual", "Merge", "Puzzle"],
+      "artStyle": ["Cute", "2D", "Cartoon"],
+      "theme": ["Animals", "Fantasy"],
+      "characters": ["Pets", "Cute Animals"]
+    },
+    "stats": {
+      "trendscore": 85,
+      "newInstalls": 25000,
+      "rating": 4.5
+    },
+    "status": "Trending",
+    "aiAnalysis": {
+      "artStyleConfidence": 0.95,
+      "themeConfidence": 0.88,
+      "similarGames": ["Pet Merge Mania", "Cute Creature Collector"]
+    }
+  },
+  {
+    "id": "com.pixelstudio.dungeon",
+    "name": "Pixel Dungeon Heroes",
+    "publisher": "Pixel Studio Games",
+    "releaseDate": "2024-03-14",
+    "description": "Explore mysterious dungeons in this roguelike pixel art adventure!",
+    "images": {
+      "icon": "/games/pixel-dungeon/icon.png",
+      "screenshots": [
+        "/games/pixel-dungeon/screen1.png",
+        "/games/pixel-dungeon/screen2.png"
+      ],
+      "featureGraphic": "/games/pixel-dungeon/feature.png"
+    },
+    "metadata": {
+      "genre": ["RPG", "Roguelike", "Adventure"],
+      "artStyle": ["Pixel Art", "Retro", "2D"],
+      "theme": ["Fantasy", "Dungeon", "Medieval"],
+      "characters": ["Knights", "Monsters", "Wizards"]
+    },
+    "stats": {
+      "trendscore": 92,
+      "newInstalls": 35000,
+      "rating": 4.8
+    },
+    "status": "Hot",
+    "aiAnalysis": {
+      "artStyleConfidence": 0.98,
+      "themeConfidence": 0.95,
+      "similarGames": ["Pixel Knights", "Retro Dungeon Crawler"]
+    }
+  },
+  {
+    "id": "com.animestudio.battlerpg",
+    "name": "Anime Battle Legends",
+    "publisher": "Anime Studio Games",
+    "releaseDate": "2024-03-13",
+    "description": "Join epic anime-style battles in this stunning action RPG!",
+    "images": {
+      "icon": "/games/anime-battle/icon.png",
+      "screenshots": [
+        "/games/anime-battle/screen1.png",
+        "/games/anime-battle/screen2.png"
+      ],
+      "featureGraphic": "/games/anime-battle/feature.png"
+    },
+    "metadata": {
+      "genre": ["Action", "RPG", "Fighting"],
+      "artStyle": ["Anime", "3D", "Cel-shaded"],
+      "theme": ["Fantasy", "Battle", "Adventure"],
+      "characters": ["Warriors", "Magic Users", "Monsters"]
+    },
+    "stats": {
+      "trendscore": 88,
+      "newInstalls": 45000,
+      "rating": 4.6
+    },
+    "status": "Rising",
+    "aiAnalysis": {
+      "artStyleConfidence": 0.96,
+      "themeConfidence": 0.92,
+      "similarGames": ["Anime Warriors", "Battle Quest Saga"]
+    }
+  },
+  {
+    "id": "com.hypercasual.runner",
+    "name": "Color Runner 3D",
+    "publisher": "Hyper Games",
+    "releaseDate": "2024-03-12",
+    "description": "Run, collect, and dodge in this colorful hyper-casual adventure!",
+    "images": {
+      "icon": "/games/color-runner/icon.png",
+      "screenshots": [
+        "/games/color-runner/screen1.png",
+        "/games/color-runner/screen2.png"
+      ],
+      "featureGraphic": "/games/color-runner/feature.png"
+    },
+    "metadata": {
+      "genre": ["Hyper-casual", "Runner", "Arcade"],
+      "artStyle": ["3D", "Minimalist", "Colorful"],
+      "theme": ["Abstract", "Runner"],
+      "characters": ["Runner", "Obstacles"]
+    },
+    "stats": {
+      "trendscore": 75,
+      "newInstalls": 55000,
+      "rating": 4.2
+    },
+    "status": "New",
+    "aiAnalysis": {
+      "artStyleConfidence": 0.94,
+      "themeConfidence": 0.90,
+      "similarGames": ["Color Rush", "Runner King"]
+    }
+  },
+  {
+    "id": "com.strategy.empire",
+    "name": "Empire: Rise of Kingdoms",
+    "publisher": "Strategy Masters",
+    "releaseDate": "2024-03-11",
+    "description": "Build your empire and conquer the world in this epic strategy game!",
+    "images": {
+      "icon": "/games/empire/icon.png",
+      "screenshots": [
+        "/games/empire/screen1.png",
+        "/games/empire/screen2.png"
+      ],
+      "featureGraphic": "/games/empire/feature.png"
+    },
+    "metadata": {
+      "genre": ["Strategy", "MMO", "Building"],
+      "artStyle": ["Realistic", "3D", "Medieval"],
+      "theme": ["War", "Empire Building", "Historical"],
+      "characters": ["Kings", "Soldiers", "Heroes"]
+    },
+    "stats": {
+      "trendscore": 82,
+      "newInstalls": 30000,
+      "rating": 4.4
+    },
+    "status": "Stable",
+    "aiAnalysis": {
+      "artStyleConfidence": 0.91,
+      "themeConfidence": 0.89,
+      "similarGames": ["Kingdom Wars", "Age of Empires Mobile"]
+    }
+  }
+]

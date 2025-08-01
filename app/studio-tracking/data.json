@@ -1,0 +1,242 @@
+[
+  {
+    "id": "studio_1",
+    "name": "Happy Games Studio",
+    "website": "https://happygames.com",
+    "country": "United States",
+    "focusGenres": ["Casual", "Merge", "Puzzle"],
+    "trackingStatus": "active",
+    "lastGameRelease": "2024-03-15",
+    "totalGames": 12,
+    "averageRating": 4.5,
+    "notificationSettings": {
+      "newReleases": true,
+      "ratings": true,
+      "updates": true
+    },
+    "notes": "Strong in casual merge games, consistent quality",
+    "competitors": ["Pixel Studio Games", "Hyper Games"],
+    "recentGames": [
+      "Merge Masters: Cute Pets",
+      "Happy Pet Village",
+      "Merge Farm Adventure"
+    ],
+    "gameReleases": [
+      {
+        "gameName": "Merge Masters: Cute Pets",
+        "releaseDate": "2024-03-15",
+        "genre": "Merge",
+        "rating": 4.6,
+        "downloads": 50000
+      },
+      {
+        "gameName": "Happy Pet Village",
+        "releaseDate": "2024-02-28",
+        "genre": "Casual",
+        "rating": 4.4,
+        "downloads": 35000
+      },
+      {
+        "gameName": "Merge Farm Adventure",
+        "releaseDate": "2024-02-15",
+        "genre": "Merge",
+        "rating": 4.3,
+        "downloads": 42000
+      },
+      {
+        "gameName": "Puzzle Quest",
+        "releaseDate": "2024-01-20",
+        "genre": "Puzzle",
+        "rating": 4.7,
+        "downloads": 28000
+      },
+      {
+        "gameName": "Cute Merge World",
+        "releaseDate": "2024-01-05",
+        "genre": "Merge",
+        "rating": 4.5,
+        "downloads": 38000
+      }
+    ]
+  },
+  {
+    "id": "studio_2",
+    "name": "Pixel Studio Games",
+    "website": "https://pixelstudio.games",
+    "country": "Canada",
+    "focusGenres": ["RPG", "Roguelike", "Pixel Art"],
+    "trackingStatus": "active",
+    "lastGameRelease": "2024-03-14",
+    "totalGames": 8,
+    "averageRating": 4.8,
+    "notificationSettings": {
+      "newReleases": true,
+      "ratings": true,
+      "updates": false
+    },
+    "notes": "Excellent pixel art style, strong community engagement",
+    "competitors": ["Retro Games Inc", "8-Bit Studios"],
+    "recentGames": [
+      "Pixel Dungeon Heroes",
+      "Retro Quest",
+      "Pixel Knights"
+    ],
+    "gameReleases": [
+      {
+        "gameName": "Pixel Dungeon Heroes",
+        "releaseDate": "2024-03-14",
+        "genre": "Roguelike",
+        "rating": 4.9,
+        "downloads": 25000
+      },
+      {
+        "gameName": "Retro Quest",
+        "releaseDate": "2024-02-25",
+        "genre": "RPG",
+        "rating": 4.8,
+        "downloads": 18000
+      },
+      {
+        "gameName": "Pixel Knights",
+        "releaseDate": "2024-02-10",
+        "genre": "RPG",
+        "rating": 4.7,
+        "downloads": 22000
+      },
+      {
+        "gameName": "Dungeon Crawler",
+        "releaseDate": "2024-01-15",
+        "genre": "Roguelike",
+        "rating": 4.6,
+        "downloads": 15000
+      },
+      {
+        "gameName": "Pixel Adventure",
+        "releaseDate": "2024-01-01",
+        "genre": "RPG",
+        "rating": 4.5,
+        "downloads": 12000
+      }
+    ]
+  },
+  {
+    "id": "studio_3",
+    "name": "Anime Studio Games",
+    "website": "https://animestudio.games",
+    "country": "Japan",
+    "focusGenres": ["Action", "RPG", "Fighting"],
+    "trackingStatus": "paused",
+    "lastGameRelease": "2024-03-13",
+    "totalGames": 15,
+    "averageRating": 4.6,
+    "notificationSettings": {
+      "newReleases": true,
+      "ratings": false,
+      "updates": true
+    },
+    "notes": "High quality anime-style games, strong in Asian markets",
+    "competitors": ["Manga Games", "Anime Warriors Studio"],
+    "recentGames": [
+      "Anime Battle Legends",
+      "Spirit Blade",
+      "Ninja Warriors"
+    ],
+    "gameReleases": [
+      {
+        "gameName": "Anime Battle Legends",
+        "releaseDate": "2024-03-13",
+        "genre": "Fighting",
+        "rating": 4.7,
+        "downloads": 45000
+      },
+      {
+        "gameName": "Spirit Blade",
+        "releaseDate": "2024-02-20",
+        "genre": "Action",
+        "rating": 4.6,
+        "downloads": 38000
+      },
+      {
+        "gameName": "Ninja Warriors",
+        "releaseDate": "2024-02-05",
+        "genre": "Action",
+        "rating": 4.5,
+        "downloads": 42000
+      },
+      {
+        "gameName": "Anime RPG Quest",
+        "releaseDate": "2024-01-25",
+        "genre": "RPG",
+        "rating": 4.4,
+        "downloads": 30000
+      },
+      {
+        "gameName": "Battle Arena",
+        "releaseDate": "2024-01-10",
+        "genre": "Fighting",
+        "rating": 4.3,
+        "downloads": 28000
+      }
+    ]
+  },
+  {
+    "id": "studio_4",
+    "name": "Hyper Games",
+    "website": "https://hypergames.com",
+    "country": "United Kingdom",
+    "focusGenres": ["Racing", "Sports", "Action"],
+    "trackingStatus": "active",
+    "lastGameRelease": "2024-03-10",
+    "totalGames": 20,
+    "averageRating": 4.4,
+    "notificationSettings": {
+      "newReleases": true,
+      "ratings": true,
+      "updates": true
+    },
+    "notes": "Fast-paced action games, strong in racing genre",
+    "competitors": ["Speed Games", "Action Studios"],
+    "recentGames": [
+      "Speed Racer Pro",
+      "Football Champions",
+      "Action Hero"
+    ],
+    "gameReleases": [
+      {
+        "gameName": "Speed Racer Pro",
+        "releaseDate": "2024-03-10",
+        "genre": "Racing",
+        "rating": 4.5,
+        "downloads": 60000
+      },
+      {
+        "gameName": "Football Champions",
+        "releaseDate": "2024-02-18",
+        "genre": "Sports",
+        "rating": 4.3,
+        "downloads": 55000
+      },
+      {
+        "gameName": "Action Hero",
+        "releaseDate": "2024-02-01",
+        "genre": "Action",
+        "rating": 4.4,
+        "downloads": 48000
+      },
+      {
+        "gameName": "Racing Legends",
+        "releaseDate": "2024-01-20",
+        "genre": "Racing",
+        "rating": 4.2,
+        "downloads": 52000
+      },
+      {
+        "gameName": "Sports Arena",
+        "releaseDate": "2024-01-05",
+        "genre": "Sports",
+        "rating": 4.1,
+        "downloads": 45000
+      }
+    ]
+  }
+]
