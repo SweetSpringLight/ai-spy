@@ -114,8 +114,9 @@ export function StudioForm({
                 setFormData((prev) => ({
                   ...prev,
                   notificationSettings: {
-                    ...prev.notificationSettings,
                     newReleases: e.target.checked,
+                    ratings: prev.notificationSettings?.ratings ?? true,
+                    updates: prev.notificationSettings?.updates ?? true,
                   },
                 }))
               }
@@ -130,8 +131,9 @@ export function StudioForm({
                 setFormData((prev) => ({
                   ...prev,
                   notificationSettings: {
-                    ...prev.notificationSettings,
+                    newReleases: prev.notificationSettings?.newReleases ?? true,
                     ratings: e.target.checked,
+                    updates: prev.notificationSettings?.updates ?? true,
                   },
                 }))
               }
@@ -146,7 +148,8 @@ export function StudioForm({
                 setFormData((prev) => ({
                   ...prev,
                   notificationSettings: {
-                    ...prev.notificationSettings,
+                    newReleases: prev.notificationSettings?.newReleases ?? true,
+                    ratings: prev.notificationSettings?.ratings ?? true,
                     updates: e.target.checked,
                   },
                 }))

@@ -9,7 +9,7 @@ import {
   IconFileAi,
   IconFileDescription,
   IconFileWord,
-  IconFolder,
+//   IconFolder,
   IconHelp,
   IconInnerShadowTop,
   IconListDetails,
@@ -19,9 +19,9 @@ import {
   IconUsers,
 } from "@tabler/icons-react"
 
-import { NavDocuments } from "@/components/nav-documents"
+// import { NavDocuments } from "@/components/nav-documents"
 import { NavMain } from "@/components/nav-main"
-import { NavSecondary } from "@/components/nav-secondary"
+// import { NavSecondary } from "@/components/nav-secondary"
 import { NavUser } from "@/components/nav-user"
 import {
   Sidebar,
@@ -32,7 +32,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { Sparkles } from "lucide-react"
+import { IconSparkles } from "@tabler/icons-react"
 
 const data = {
   user: {
@@ -59,7 +59,7 @@ const data = {
     {
       title: "Chat AI",
       url: "/chat-ai",
-      icon: Sparkles,
+      icon: IconSparkles,
     },
     {
       title: "Studio Tracking",

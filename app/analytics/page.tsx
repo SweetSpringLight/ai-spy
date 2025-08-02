@@ -72,7 +72,7 @@ export default function AnalyticsPage() {
                           </div>
                           <div className="flex justify-between">
                             <span>Growth:</span>
-                            <Badge variant="success">{style.growth}</Badge>
+                            <Badge variant="secondary">{style.growth}</Badge>
                           </div>
                           <div className="flex justify-between">
                             <span>Games:</span>

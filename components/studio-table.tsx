@@ -8,7 +8,6 @@ import {
   IconEdit,
   IconExternalLink,
   IconTrash,
-  IconUsers,
 } from "@tabler/icons-react"
 import {
   ColumnDef,
@@ -22,7 +21,6 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table"
-import { format } from "date-fns"
 import { z } from "zod"
 
 // Import data directly to avoid Turbopack issues
@@ -253,8 +251,9 @@ function StudioForm({
                 setFormData((prev) => ({
                   ...prev,
                   notificationSettings: {
-                    ...prev.notificationSettings,
                     newReleases: e.target.checked,
+                    ratings: prev.notificationSettings?.ratings ?? true,
+                    updates: prev.notificationSettings?.updates ?? true,
                   },
                 }))
               }
@@ -269,8 +268,9 @@ function StudioForm({
                 setFormData((prev) => ({
                   ...prev,
                   notificationSettings: {
-                    ...prev.notificationSettings,
+                    newReleases: prev.notificationSettings?.newReleases ?? true,
                     ratings: e.target.checked,
+                    updates: prev.notificationSettings?.updates ?? true,
                   },
                 }))
               }
@@ -285,7 +285,8 @@ function StudioForm({
                 setFormData((prev) => ({
                   ...prev,
                   notificationSettings: {
-                    ...prev.notificationSettings,
+                    newReleases: prev.notificationSettings?.newReleases ?? true,
+                    ratings: prev.notificationSettings?.ratings ?? true,
                     updates: e.target.checked,
                   },
                 }))

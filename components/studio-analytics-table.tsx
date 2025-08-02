@@ -1,8 +1,8 @@
 "use client"
 
 import * as React from "react"
-import { IconCalendar, IconFilter, IconTrendingUp } from "@tabler/icons-react"
-import { format, subDays, startOfDay, endOfDay } from "date-fns"
+import { IconCalendar, IconTrendingUp } from "@tabler/icons-react"
+import { subDays, startOfDay, endOfDay } from "date-fns"
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -22,18 +22,18 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
+// import {
+//   Popover,
+//   PopoverContent,
+//   PopoverTrigger,
+// } from "@/components/ui/popover"
+// import {
+//   Select,
+//   SelectContent,
+//   SelectItem,
+//   SelectTrigger,
+//   SelectValue,
+// } from "@/components/ui/select"
 import {
   Table,
   TableBody,
@@ -45,27 +45,30 @@ import {
 import Calendar23 from "@/components/calendar-23"
 
 // Schema for game release data
-const gameReleaseSchema = z.object({
-  gameName: z.string(),
-  releaseDate: z.string(),
-  genre: z.string(),
-  rating: z.number(),
-  downloads: z.number(),
-})
+// const gameReleaseSchema = z.object({
+//   gameName: z.string(),
+//   releaseDate: z.string(),
+//   genre: z.string(),
+//   rating: z.number(),
+//   downloads: z.number(),
+// })
 
-const studioAnalyticsSchema = z.object({
-  id: z.string(),
-  name: z.string(),
-  country: z.string(),
-  focusGenres: z.array(z.string()),
-  trackingStatus: z.string(),
-  totalGames: z.number(),
-  averageRating: z.number(),
-  gameReleases: z.array(gameReleaseSchema),
-})
-
-type StudioAnalytics = z.infer<typeof studioAnalyticsSchema>
-type GameRelease = z.infer<typeof gameReleaseSchema>
+type StudioAnalytics = {
+  id: string
+  name: string
+  country: string
+  focusGenres: string[]
+  trackingStatus: string
+  totalGames: number
+  averageRating: number
+  gameReleases: {
+    gameName: string
+    releaseDate: string
+    genre: string
+    rating: number
+    downloads: number
+  }[]
+}
 
 // Extended type for filtered data
 type StudioAnalyticsWithMetrics = StudioAnalytics & {
@@ -611,7 +614,7 @@ export function StudioAnalyticsTable() {
         <Input
           placeholder="Filter studios..."
           value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
-          onChange={(event) =>
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
             table.getColumn("name")?.setFilterValue(event.target.value)
           }
           className="max-w-sm"

@@ -6,7 +6,7 @@ import { type DateRange } from "react-day-picker"
 
 import { Button } from "@/components/ui/button"
 import { Calendar } from "@/components/ui/calendar"
-import { Label } from "@/components/ui/label"
+// import { Label } from "@/components/ui/label"
 import {
   Popover,
   PopoverContent,
@@ -19,7 +19,7 @@ interface Calendar23Props {
   label?: string
 }
 
-export default function Calendar23({ range, onRangeChange, label = "Select date range" }: Calendar23Props) {
+export default function Calendar23({ range, onRangeChange}: Calendar23Props) {
   const [internalRange, setInternalRange] = React.useState<DateRange | undefined>(range)
 
   const handleRangeChange = (newRange: DateRange | undefined) => {

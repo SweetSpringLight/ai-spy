@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Send, Bot, User } from "lucide-react"
 import { useState, useEffect } from "react"
+import { useClient } from "@/hooks/use-client"
 
 interface Message {
   id: string
@@ -23,23 +24,29 @@ export default function ChatAIPage() {
   const [messages, setMessages] = useState<Message[]>([])
   const [inputValue, setInputValue] = useState("")
   const [isLoading, setIsLoading] = useState(false)
-  const [isClient, setIsClient] = useState(false)
+  const isClient = useClient()
 
   useEffect(() => {
-    setIsClient(true)
     // Initialize with welcome message only on client
     setMessages([
       {
         id: "welcome",
         content: "Hello! I'm your AI assistant. How can I help you today?",
         role: "assistant",
-        timestamp: new Date().toLocaleTimeString()
+        timestamp: new Date().toISOString() // Use ISO string for consistency
       }
     ])
   }, [])
 
   const generateId = () => {
+    // Use a more deterministic approach for client-side only
+    if (typeof window === 'undefined') return ''
     return Math.random().toString(36).substr(2, 9)
+  }
+
+  const getCurrentTime = () => {
+    // Use ISO string for consistency between server and client
+    return new Date().toISOString()
   }
 
   const handleSendMessage = async () => {
@@ -49,7 +56,7 @@ export default function ChatAIPage() {
       id: generateId(),
       content: inputValue,
       role: "user",
-      timestamp: new Date().toLocaleTimeString()
+      timestamp: getCurrentTime()
     }
 
     setMessages(prev => [...prev, userMessage])
@@ -62,7 +69,7 @@ export default function ChatAIPage() {
         id: generateId(),
         content: "This is a simulated AI response. In a real application, this would be connected to an AI service.",
         role: "assistant",
-        timestamp: new Date().toLocaleTimeString()
+        timestamp: getCurrentTime()
       }
       setMessages(prev => [...prev, aiMessage])
       setIsLoading(false)
@@ -73,6 +80,14 @@ export default function ChatAIPage() {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault()
       handleSendMessage()
+    }
+  }
+
+  const formatTime = (isoString: string) => {
+    try {
+      return new Date(isoString).toLocaleTimeString()
+    } catch {
+      return isoString
     }
   }
 
@@ -152,7 +167,7 @@ export default function ChatAIPage() {
                 >
                   <p className="text-sm">{message.content}</p>
                   <p className="text-xs opacity-70 mt-1">
-                    {message.timestamp}
+                    {formatTime(message.timestamp)}
                   </p>
                 </div>
 
