@@ -25,7 +25,7 @@ export default function TrendingPage() {
         <div className="flex flex-1 flex-col">
           <div className="@container/main flex flex-1 flex-col gap-2">
             {/* Filter Bar */}
-            <div className="bg-gray-50 border-b px-4 lg:px-6 py-3">
+            <div className="bg-muted/50 border-b px-4 lg:px-6 py-3">
               <div className="flex items-center gap-4">
                 <Select defaultValue="vietnam">
                   <SelectTrigger className="w-[140px]">

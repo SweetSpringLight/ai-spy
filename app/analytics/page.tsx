@@ -136,7 +136,7 @@ export default function AnalyticsPage() {
                         key={index}
                         className="flex items-center gap-3 rounded-lg border p-4"
                       >
-                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground dark:text-white">
                           {index + 1}
                         </span>
                         <p className="text-lg">{prediction}</p>
