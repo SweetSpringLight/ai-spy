@@ -7,13 +7,15 @@ import { StudioTableWrapper } from "@/components/studio-table-wrapper"
 import { StudioAnalyticsTable } from "@/components/studio-analytics-table"
 import { Card } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { ProtectedRoute } from "@/components/protected-route"
 
 export const dynamic = "force-dynamic"
 export const revalidate = 0
 
 export default function StudioTrackingPage() {
   return (
-    <SidebarProvider
+    <ProtectedRoute>
+      <SidebarProvider
       style={
         {
           "--sidebar-width": "calc(var(--spacing) * 72)",
@@ -64,5 +66,6 @@ export default function StudioTrackingPage() {
         </div>
       </SidebarInset>
     </SidebarProvider>
+    </ProtectedRoute>
   )
 }

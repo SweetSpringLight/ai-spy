@@ -8,10 +8,12 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Button } from "@/components/ui/button"
 import { Download, Share2, Code, ChevronLeft, ChevronRight, MoreVertical, HelpCircle } from "lucide-react"
+import { ProtectedRoute } from "@/components/protected-route"
 
 export default function TrendingPage() {
   return (
-    <SidebarProvider
+    <ProtectedRoute>
+      <SidebarProvider
       style={
         {
           "--sidebar-width": "calc(var(--spacing) * 72)",
@@ -221,5 +223,6 @@ export default function TrendingPage() {
         </div>
       </SidebarInset>
     </SidebarProvider>
+    </ProtectedRoute>
   )
 }

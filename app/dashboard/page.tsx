@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/sidebar"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { ProtectedRoute } from "@/components/protected-route"
 
 import gameData from "./data.json"
 
@@ -27,7 +28,8 @@ const analyticsData = {
 
 export default function Page() {
   return (
-    <SidebarProvider
+    <ProtectedRoute>
+      <SidebarProvider
       style={
         {
           "--sidebar-width": "calc(var(--spacing) * 72)",
@@ -89,7 +91,8 @@ export default function Page() {
             </div>
           </div>
         </div>
-      </SidebarInset>
-    </SidebarProvider>
+              </SidebarInset>
+      </SidebarProvider>
+    </ProtectedRoute>
   )
 }

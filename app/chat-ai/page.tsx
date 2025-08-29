@@ -12,6 +12,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Send, Bot, User } from "lucide-react"
 import { useState, useEffect } from "react"
 import { useClient } from "@/hooks/use-client"
+import { ProtectedRoute } from "@/components/protected-route"
 
 interface Message {
   id: string
@@ -94,7 +95,8 @@ export default function ChatAIPage() {
   // Don't render until client-side to avoid hydration mismatch
   if (!isClient) {
     return (
-      <SidebarProvider
+      <ProtectedRoute>
+        <SidebarProvider
         style={
           {
             "--sidebar-width": "calc(var(--spacing) * 72)",
@@ -124,11 +126,13 @@ export default function ChatAIPage() {
           </div>
         </SidebarInset>
       </SidebarProvider>
+      </ProtectedRoute>
     )
   }
 
   return (
-    <SidebarProvider
+    <ProtectedRoute>
+      <SidebarProvider
       style={
         {
           "--sidebar-width": "calc(var(--spacing) * 72)",
@@ -229,5 +233,6 @@ export default function ChatAIPage() {
         </div>
       </SidebarInset>
     </SidebarProvider>
+    </ProtectedRoute>
   )
 }

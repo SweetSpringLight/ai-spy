@@ -29,6 +29,7 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { useAuth } from "@/hooks/use-auth"
 
 export function NavUser({
   user,
@@ -40,6 +41,15 @@ export function NavUser({
   }
 }) {
   const { isMobile } = useSidebar()
+  const { logout } = useAuth()
+
+  const handleLogout = async () => {
+    try {
+      await logout()
+    } catch (error) {
+      console.error('Logout failed:', error)
+    }
+  }
 
   return (
     <SidebarMenu>
@@ -104,7 +114,7 @@ export function NavUser({
               <ThemeToggle />
             </div>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuItem onClick={handleLogout}>
               <IconLogout />
               Log out
             </DropdownMenuItem>

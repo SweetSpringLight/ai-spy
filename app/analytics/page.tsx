@@ -4,6 +4,7 @@ import { AppSidebar } from "@/components/app-sidebar"
 import { SiteHeader } from "@/components/site-header"
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
 import { ChartAreaInteractive } from "@/components/chart-area-interactive"
+import { ProtectedRoute } from "@/components/protected-route"
 
 // Fake analytics data for AI analysis
 const aiAnalytics = {
@@ -43,7 +44,8 @@ const aiAnalytics = {
 
 export default function AnalyticsPage() {
   return (
-    <SidebarProvider
+    <ProtectedRoute>
+      <SidebarProvider
       style={
         {
           "--sidebar-width": "calc(var(--spacing) * 72)",
@@ -150,5 +152,6 @@ export default function AnalyticsPage() {
         </div>
       </SidebarInset>
     </SidebarProvider>
+    </ProtectedRoute>
   )
 }

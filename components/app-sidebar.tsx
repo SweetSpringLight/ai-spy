@@ -33,6 +33,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import { IconSparkles } from "@tabler/icons-react"
+import { useAuth } from "@/hooks/use-auth"
 
 const data = {
   user: {
@@ -151,7 +152,62 @@ const data = {
   ],
 }
 
+// Loading skeleton component for user section
+function UserLoadingSkeleton() {
+  return (
+    <div className="flex items-center gap-3 px-3 py-2">
+      <div className="h-8 w-8 rounded-lg bg-muted animate-pulse" />
+      <div className="flex-1 space-y-1">
+        <div className="h-3 w-20 bg-muted rounded animate-pulse" />
+        <div className="h-2 w-24 bg-muted rounded animate-pulse" />
+      </div>
+    </div>
+  )
+}
+
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { user, isLoading } = useAuth()
+
+  // Create user data object based on auth state
+  const userData = user ? {
+    name: user.name,
+    email: user.email,
+    avatar: user.avatar || "/avatars/default-avatar.jpg", // fallback avatar
+  } : {
+    name: "Guest",
+    email: "guest@example.com",
+    avatar: "/avatars/default-avatar.jpg",
+  }
+
+  // Show loading skeleton if still loading
+  if (isLoading) {
+    return (
+      <Sidebar collapsible="offcanvas" {...props}>
+        <SidebarHeader>
+          <SidebarMenu>
+            <SidebarMenuItem>
+              <SidebarMenuButton
+                asChild
+                className="data-[slot=sidebar-menu-button]:!p-1.5"
+              >
+                <a href="#">
+                  <IconInnerShadowTop className="!size-5" />
+                  <span className="text-base font-semibold">AI Spy</span>
+                </a>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          </SidebarMenu>
+        </SidebarHeader>
+        <SidebarContent>
+          <NavMain items={data.navMain} />
+        </SidebarContent>
+        <SidebarFooter>
+          <UserLoadingSkeleton />
+        </SidebarFooter>
+      </Sidebar>
+    )
+  }
+
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
@@ -175,7 +231,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         {/* <NavSecondary items={data.navSecondary} className="mt-auto" /> */}
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={data.user} />
+        <NavUser user={userData} />
       </SidebarFooter>
     </Sidebar>
   )
